@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  user-select: none;
+  overflow: hidden;
+}
+
+body {
+  position: fixed;
+}
+
+.crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  font-size: 40px;
+  transform: translate(-50%, -50%);
+  color: #fff;
+} 
+
+.texture-selector {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: gray;
+  border: 4px solid rgb(99, 97, 97);
+}
+
+.texture-selector img {
+  width: 80px;
+  z-index: 100;
+  image-rendering: pixelated;
+  border: 4px solid rgb(99, 97, 97);
+}
+
+.texture-selector img.selected {
+  border: 2px solid red;
+
+}
